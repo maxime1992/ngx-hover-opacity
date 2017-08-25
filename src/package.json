@@ -9,9 +9,7 @@
     "name": "Maxime ROBERT",
     "email": "maxime.robert1992@gmail.com"
   },
-  "keywords": [
-    "angular"
-  ],
+  "keywords": ["angular", "hover", "opacity"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/maxime1992/ngx-hover-opacity/issues"
