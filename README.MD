@@ -5,18 +5,16 @@
 To install this library, run:
 
 ```bash
+$ yarn add ngx-hover-opacity
+```
+or
+```bash
 $ npm install ngx-hover-opacity --save
 ```
 
-## Consuming your library
+## Setup with Angular
 
-Once you have published your library to npm, you can import your library in any Angular application by running:
-
-```bash
-$ npm install ngx-hover-opacity
-```
-
-and then from your Angular `AppModule`:
+From your Angular module (`AppModule` for example):
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -24,8 +22,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-// Import your library
-import { SampleModule } from 'ngx-hover-opacity';
+// import the module
+import { NgxHoverOpacityModule } from 'ngx-hover-opacity';
 
 @NgModule({
   declarations: [
@@ -34,8 +32,8 @@ import { SampleModule } from 'ngx-hover-opacity';
   imports: [
     BrowserModule,
 
-    // Specify your library as an import
-    LibraryModule
+    // specify it as an import
+    NgxHoverOpacityModule
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -43,14 +41,12 @@ import { SampleModule } from 'ngx-hover-opacity';
 export class AppModule { }
 ```
 
-Once your library is imported, you can use its components, directives and pipes in your Angular application:
+Once your library is imported, you can use the component `ngx-hover-opacity` in your Angular application:
 
-```xml
-<!-- You can now use your library component in app.component.html -->
-<h1>
-  {{title}}
-</h1>
-<sampleComponent></sampleComponent>
+```html
+<ngx-hover-opacity [isHoverVisible]="true">
+  <div>Your content that might get hidden</div>
+</ngx-hover-opacity>
 ```
 
 ## Development
@@ -58,13 +54,11 @@ Once your library is imported, you can use its components, directives and pipes 
 To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
 
 ```bash
-$ npm run build
+$ yarn run build
 ```
-
-To lint all `*.ts` files:
-
+or
 ```bash
-$ npm run lint
+$ npm run build
 ```
 
 ## License
