@@ -1,8 +1,8 @@
-function isString(value: any) {
+export function isString(value: any) {
   return typeof value === 'string';
 }
 
-function camelCaseToDash(str: string) {
+export function camelCaseToDash(str: string) {
   return str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
 }
 
