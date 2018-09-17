@@ -13,7 +13,7 @@ export interface INgxHoverOpacityComponentCustomStyle {
 @Component({
   selector: 'ngx-hover-opacity',
   template: `
-    <div class="content">
+    <div class="content" [class.is-full-height]="isFullHeight">
       <ng-content></ng-content>
 
       <div
@@ -24,9 +24,13 @@ export interface INgxHoverOpacityComponentCustomStyle {
   `,
   styles: [
     `
-      ngx-hover-opacity
+      ngx-hover-opacity {
         .content {
           position: relative;
+
+          &.is-full-height {
+            min-height: 100%;
+          }
         }
 
         .hover {
@@ -46,5 +50,6 @@ export interface INgxHoverOpacityComponentCustomStyle {
 })
 export class NgxHoverOpacityComponent {
   @Input() isHoverVisible: boolean;
+  @Input() isFullHeight = true;
   @Input() style: INgxHoverOpacityComponentCustomStyle;
 }
