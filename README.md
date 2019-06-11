@@ -16,7 +16,7 @@ ngx-hover-opacity set to **OFF**
 ngx-hover-opacity set to **ON**  
 ![A MatCard from material with ngx-hover-opacity set to ON](https://user-images.githubusercontent.com/4950209/29740633-4446d972-8a5b-11e7-9c61-f231d40d803a.png)
 
-You can also [try it live on Stackblitz!](https://stackblitz.com/edit/angular-se17ec)
+You can also [try it live on Stackblitz!](https://stackblitz.com/edit/ngx-hover-opacity)
 
 ## Installation
 
