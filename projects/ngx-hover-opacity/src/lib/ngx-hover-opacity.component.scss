@@ -1,0 +1,19 @@
+ngx-hover-opacity {
+  .content {
+    position: relative;
+  }
+
+  .content.is-full-height {
+    min-height: 100%;
+  }
+
+  .hover {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
