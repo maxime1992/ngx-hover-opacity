@@ -1,4 +1,30 @@
-language: node_js
 sudo: false
+
+language: node_js
 node_js:
-- '4.2.1'
+  - '10'
+
+cache: yarn
+
+install:
+  - yarn --frozen-lockfile --non-interactive --no-progress
+
+script:
+  # lint
+  - yarn run demo:lint:check
+  - yarn run prettier:check
+  # build
+  - yarn run lib:build:prod
+  - yarn run demo:build:prod --progress=false --base-href "https://cloudnc.github.io/ngx-hover-opacity/"
+  # publish to npm
+  - yarn global add cpy-cli --ignore-engines
+  - cpy README.md dist/ngx-hover-opacity
+  - test $TRAVIS_BRANCH = "master" && yarn run semantic-release || echo "Skipping deploy"
+
+deploy:
+  skip_cleanup: true
+  provider: pages
+  github_token: $GH_TOKEN
+  local_dir: dist/ngx-hover-opacity-demo
+  on:
+    branch: master

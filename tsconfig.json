@@ -1,14 +1,21 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./src",
-    "experimentalDecorators": true,
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "esnext",
     "moduleResolution": "node",
-    "rootDir": "./src",
-    "lib": [
-      "es2015",
-      "dom"
-    ],
-    "skipLibCheck": true,
-    "types": []
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2018", "dom"],
+    "paths": {
+      "ngx-hover-opacity": ["dist/ngx-hover-opacity"],
+      "ngx-hover-opacity/*": ["dist/ngx-hover-opacity/*"]
+    }
   }
 }
