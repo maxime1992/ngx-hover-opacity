@@ -19,6 +19,7 @@
 *.sublime-workspace
 .vscode/*
 .history
+.angular
 
 # auto-generated files
 /angular.json

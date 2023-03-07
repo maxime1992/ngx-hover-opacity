@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
+import { Nilable } from 'tsdef';
 
 export interface INgxHoverOpacityComponentCustomStyle {
   backgroundColor: string;
@@ -13,7 +14,7 @@ export interface INgxHoverOpacityComponentCustomStyle {
   encapsulation: ViewEncapsulation.None,
 })
 export class NgxHoverOpacityComponent {
-  @Input() isHoverVisible: boolean;
+  @Input() isHoverVisible: Nilable<boolean>;
   @Input() isFullHeight = true;
-  @Input() style: INgxHoverOpacityComponentCustomStyle;
+  @Input() style: Nilable<INgxHoverOpacityComponentCustomStyle>;
 }
