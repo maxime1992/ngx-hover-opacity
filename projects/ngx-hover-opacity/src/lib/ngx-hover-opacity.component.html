@@ -1,5 +1,7 @@
 <div class="content" [class.is-full-height]="isFullHeight">
   <ng-content></ng-content>
 
-  <div class="hover" *ngIf="isHoverVisible"></div>
+  <div class="hover" *ngIf="isHoverVisible">
+    <ng-container *ngTemplateOutlet="hoverOpacityTpl ?? null"></ng-container>
+  </div>
 </div>
