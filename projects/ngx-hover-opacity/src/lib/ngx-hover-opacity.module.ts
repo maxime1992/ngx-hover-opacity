@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { NgxHoverOpacityComponent } from './ngx-hover-opacity.component';
+import { HoverOpacityTplDirective, NgxHoverOpacityComponent } from './ngx-hover-opacity.component';
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [NgxHoverOpacityComponent],
-  exports: [NgxHoverOpacityComponent],
+  declarations: [NgxHoverOpacityComponent, HoverOpacityTplDirective],
+  exports: [NgxHoverOpacityComponent, HoverOpacityTplDirective],
 })
 export class NgxHoverOpacityModule {}

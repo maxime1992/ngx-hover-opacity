@@ -2,6 +2,10 @@
 
 <!--use the ngx-hover-opacity component to wrap the element to hover -->
 <ngx-hover-opacity [isHoverVisible]="isHoverVisible">
+  <ng-template hoverOpacityTpl>
+    <div class="wrapper">This is a template that can go above the hover!</div>
+  </ng-template>
+
   <mat-card>
     <mat-card-header>
       <mat-card-title>Card Title</mat-card-title>
